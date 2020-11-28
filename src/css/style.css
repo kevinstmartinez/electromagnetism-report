@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fbfbfb;
+}
+iframe{
+    width: 100%;
+    height: 320px;
+  
+}
+.image{
+    cursor: pointer;
+}
+.title{
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
+    font-size: 4em;
+}
+.grid{
+    width: 75%;
+    margin: 0 auto;
+    display: grid; 
+    grid-row-gap: 2em;   
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto auto auto auto;
+    align-items: center;
+}
+
+.equation.gauss-2{
+    grid-column: 2;
+    grid-row: 2;
+  
+}
+.equation.faraday{
+    grid-column: 1;
+    grid-row: 3;
+}
+.equation.ampere{
+    grid-column: 2;
+    grid-row: 4;
+}
+.modal{
+    visibility: hidden;
+    background: #fff;
+    width: 500px;
+}
+.modal.visible{
+    visibility: visible;
+}
+.modal p{
+    padding: 1em;
+}
+.modal header{
+    padding: 15px;
+    font-size: 1.5em;
+    background: #3e4653;
+    color: wheat;
+}
+@media screen and (max-width:375px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .equation.gauss-2{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .equation.faraday{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .equation.ampere{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+
+}
